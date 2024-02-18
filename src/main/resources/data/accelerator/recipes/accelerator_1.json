@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "NDN",
+    "#N#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond_block"
+    },
+    "D": {
+      "item": "minecraft:clock"
+    },
+    "N": {
+      "item": "netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "accelerator:accelerator_1"
+  }
+}
