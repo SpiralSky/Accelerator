@@ -1,6 +1,6 @@
 package com.spiralsky.accelerator.Blocks;
 
-import com.spiralsky.accelerator.BlockEntityInit;
+import com.spiralsky.accelerator.Init.BlockEntityInit;
 import com.spiralsky.accelerator.util.TickableBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;

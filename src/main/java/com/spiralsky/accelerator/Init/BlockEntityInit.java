@@ -1,5 +1,6 @@
-package com.spiralsky.accelerator;
+package com.spiralsky.accelerator.Init;
 
+import com.spiralsky.accelerator.Accelerator;
 import com.spiralsky.accelerator.BlockEntities.Accelerator1BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;

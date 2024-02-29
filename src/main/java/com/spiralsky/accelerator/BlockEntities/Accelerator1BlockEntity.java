@@ -1,13 +1,10 @@
 package com.spiralsky.accelerator.BlockEntities;
 
-import com.spiralsky.accelerator.BlockEntityInit;
+import com.spiralsky.accelerator.Init.BlockEntityInit;
 import com.spiralsky.accelerator.util.TickableBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.CactusBlock;
-import net.minecraft.world.level.block.SugarCaneBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
