@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "accelerator:block/accelerator_1"
+    "all": "accelerator:block/accelerator_4"
   }
 }

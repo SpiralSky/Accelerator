@@ -11,6 +11,6 @@ public class BlockEntityInit {
     public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Accelerator.MODID);
     public static final RegistryObject<BlockEntityType<Accelerator1BlockEntity>> ACCELERATOR_1_BLOCKENTITY = TILE_ENTITY_TYPES.register("accelerator_1",
-            () -> BlockEntityType.Builder.of(Accelerator1BlockEntity::new, BlockInit.ACCELERATOR_1_BLOCK.get()).build(null));
+            () -> BlockEntityType.Builder.of(Accelerator1BlockEntity::new, BlockInit.ACCELERATOR_4_BLOCK.get()).build(null));
 
 }
