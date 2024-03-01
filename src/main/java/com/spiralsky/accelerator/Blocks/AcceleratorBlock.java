@@ -1,5 +1,6 @@
 package com.spiralsky.accelerator.Blocks;
 
+import com.spiralsky.accelerator.BlockEntities.AcceleratorBlockEntity;
 import com.spiralsky.accelerator.Init.BlockEntityInit;
 import com.spiralsky.accelerator.util.TickableBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -13,13 +14,18 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 
-public class Accelerator1Block extends Block implements EntityBlock{
-    public Accelerator1Block(Block.Properties properties) {
+public class AcceleratorBlock extends Block implements EntityBlock{
+    int speed;
+    public AcceleratorBlock(Block.Properties properties, int speed) {
         super(properties);
+        this.speed = speed;
     }
     public BlockEntity newBlockEntity(@NotNull BlockPos pos,@NotNull BlockState state) {
-        return BlockEntityInit.ACCELERATOR_1_BLOCKENTITY.get().create(pos, state);
+        AcceleratorBlockEntity blockEntity = BlockEntityInit.ACCELERATOR_1_BLOCKENTITY.get().create(pos, state);
+        Objects.requireNonNull(blockEntity).setSpeed(this.speed);
+        return blockEntity;
     }
     @Nullable
     @Override

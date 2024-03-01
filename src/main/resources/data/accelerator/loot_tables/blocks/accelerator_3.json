@@ -1,13 +1,8 @@
 {
-  "type": "minecraft:chest",
+  "type": "minecraft:block",
   "pools": [
     {
-      "rolls": {
-        "type": "minecraft:binomial",
-        "n": 10,
-        "p": 0.2
-      },
-      "bonus_rolls": 2,
+      "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:item",

@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 import static com.spiralsky.accelerator.Accelerator.MODID;
-import static com.spiralsky.accelerator.Init.BlockInit.ACCELERATOR_1_ITEM;
+import static com.spiralsky.accelerator.Init.BlockInit.*;
 
 public class CreativeTabInit {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
@@ -18,6 +18,9 @@ public class CreativeTabInit {
             .icon(() -> ACCELERATOR_1_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(ACCELERATOR_1_ITEM.get());
+                output.accept(ACCELERATOR_2_ITEM.get());
+                output.accept(ACCELERATOR_3_ITEM.get());
+                output.accept(ACCELERATOR_4_ITEM.get());
             }).build());
 }
 

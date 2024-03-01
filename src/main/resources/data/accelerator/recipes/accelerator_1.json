@@ -7,16 +7,16 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:netherite_block"
+      "tag": "minecraft:planks"
     },
     "D": {
       "item": "minecraft:clock"
     },
     "N": {
-      "item": "diamond_block"
+      "item": "iron_ingot"
     }
   },
   "result": {
-    "item": "accelerator:accelerator_4"
+    "item": "accelerator:accelerator_1"
   }
 }

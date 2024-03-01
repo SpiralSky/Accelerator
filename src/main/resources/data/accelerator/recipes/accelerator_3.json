@@ -7,16 +7,16 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:netherite_block"
+      "item": "minecraft:diamond_block"
     },
     "D": {
       "item": "minecraft:clock"
     },
     "N": {
-      "item": "diamond_block"
+      "item": "netherite_ingot"
     }
   },
   "result": {
-    "item": "accelerator:accelerator_4"
+    "item": "accelerator:accelerator_3"
   }
 }
