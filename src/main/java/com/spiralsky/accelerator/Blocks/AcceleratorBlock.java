@@ -23,7 +23,7 @@ public class AcceleratorBlock extends Block implements EntityBlock{
         this.speed = speed;
     }
     public BlockEntity newBlockEntity(@NotNull BlockPos pos,@NotNull BlockState state) {
-        AcceleratorBlockEntity blockEntity = BlockEntityInit.ACCELERATOR_1_BLOCKENTITY.get().create(pos, state);
+        AcceleratorBlockEntity blockEntity = BlockEntityInit.ACCELERATOR_BLOCKENTITY.get().create(pos, state);
         Objects.requireNonNull(blockEntity).setSpeed(this.speed);
         return blockEntity;
     }
