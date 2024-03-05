@@ -15,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 public class AcceleratorBlockEntity extends BlockEntity implements TickableBlockEntity{
     int speed;
     public AcceleratorBlockEntity(BlockPos pos, BlockState state) {
-        super(BlockEntityInit.ACCELERATOR_1_BLOCKENTITY.get(), pos, state);
+        super(BlockEntityInit.ACCELERATOR_BLOCKENTITY.get(), pos, state);
     }
 
     public void setSpeed(int speed) {

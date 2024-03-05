@@ -20,7 +20,7 @@ public class BlockInit {
 
     //Blocks
     public static final RegistryObject<Block> ACCELERATOR_1_BLOCK = BLOCKS.register("accelerator_1",
-            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(2f,100f),2));
+            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(2f,100f),1));
     public static final RegistryObject<Block> ACCELERATOR_2_BLOCK = BLOCKS.register("accelerator_2",
             () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(4f,100f),3));
     public static final RegistryObject<Block> ACCELERATOR_3_BLOCK = BLOCKS.register("accelerator_3",
