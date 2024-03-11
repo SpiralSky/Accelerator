@@ -13,6 +13,8 @@ import net.minecraftforge.common.IPlantable;
 import org.jetbrains.annotations.NotNull;
 
 public class AcceleratorBlockEntity extends BlockEntity implements TickableBlockEntity{
+    double tickInterval;
+    int tickCounter;
     int speed;
     public AcceleratorBlockEntity(BlockPos pos, BlockState state) {
         super(BlockEntityInit.ACCELERATOR_BLOCKENTITY.get(), pos, state);
@@ -20,14 +22,19 @@ public class AcceleratorBlockEntity extends BlockEntity implements TickableBlock
 
     public void setSpeed(int speed) {
         this.speed = speed;
+        this.tickInterval = Math.floor(10f/speed);
     }
     //@Override
     public void tick() {
+        this.tickCounter = this.tickCounter < this.tickInterval ? this.tickCounter + 1 : 0;
         if (level != null && !level.isClientSide) {
+
             BlockPos pos = worldPosition.offset(0,0,0);
             BlockPos.betweenClosed(pos.offset(2,2,2),pos.offset(-2,-2,-2)).forEach(blockPos -> {
                 updateBlockEntityAtPos(blockPos);
-                updateCropsAtPos(blockPos);
+                if (this.tickCounter == 0) {
+                    updateCropsAtPos(blockPos);
+                }
             });
         }
     }
@@ -46,6 +53,9 @@ public class AcceleratorBlockEntity extends BlockEntity implements TickableBlock
             return;
         }
         BlockEntityTicker<BlockEntity> ticker = blockEntity.getBlockState().getTicker(level, (BlockEntityType<BlockEntity>) blockEntity.getType());
+        if (ticker == null) {
+            return;
+        }
         for (int i=0;i<this.speed;i++) {
             ticker.tick(level, blockPos, blockEntity.getBlockState(), blockEntity);
         }
