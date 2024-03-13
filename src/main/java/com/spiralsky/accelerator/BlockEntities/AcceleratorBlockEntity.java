@@ -3,8 +3,8 @@ package com.spiralsky.accelerator.BlockEntities;
 import com.spiralsky.accelerator.Init.BlockEntityInit;
 import com.spiralsky.accelerator.util.TickableBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -38,20 +38,31 @@ public class AcceleratorBlockEntity extends BlockEntity implements TickableBlock
             });
         }
     }
+    @Override
+    public void saveAdditional(@NotNull CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        nbt.putInt("speed",this.speed);
+    }
+    @Override
+    public void load(@NotNull CompoundTag nbt) {
+        super.load(nbt);
+        this.speed = nbt.getInt("speed");
+    }
     public void updateCropsAtPos(@NotNull BlockPos blockPos) {
         assert level != null;
         BlockState cropState = level.getBlockState(blockPos);
-        Block cropBlock = cropState.getBlock();
-        if (cropBlock instanceof IPlantable) {
-            cropBlock.randomTick(cropState, (ServerLevel) level, blockPos, level.random);
+        if (cropState.getBlock() instanceof IPlantable) {
+            cropState.randomTick((ServerLevel) level, blockPos, level.random);
         }
     }
+    @SuppressWarnings("unchecked")
     public void updateBlockEntityAtPos(@NotNull BlockPos blockPos) {
         assert level != null;
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
         if (blockEntity instanceof AcceleratorBlockEntity || blockEntity == null) {
             return;
         }
+
         BlockEntityTicker<BlockEntity> ticker = blockEntity.getBlockState().getTicker(level, (BlockEntityType<BlockEntity>) blockEntity.getType());
         if (ticker == null) {
             return;
@@ -60,4 +71,5 @@ public class AcceleratorBlockEntity extends BlockEntity implements TickableBlock
             ticker.tick(level, blockPos, blockEntity.getBlockState(), blockEntity);
         }
     }
+
 }
