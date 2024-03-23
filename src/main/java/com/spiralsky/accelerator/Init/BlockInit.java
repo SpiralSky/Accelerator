@@ -22,11 +22,11 @@ public class BlockInit {
     public static final RegistryObject<Block> ACCELERATOR_1_BLOCK = BLOCKS.register("accelerator_1",
             () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(2f,100f),1));
     public static final RegistryObject<Block> ACCELERATOR_2_BLOCK = BLOCKS.register("accelerator_2",
-            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(4f,100f),3));
+            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(4f,100f),2));
     public static final RegistryObject<Block> ACCELERATOR_3_BLOCK = BLOCKS.register("accelerator_3",
-            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(6f,100f),10));
+            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(6f,100f),3));
     public static final RegistryObject<Block> ACCELERATOR_4_BLOCK = BLOCKS.register("accelerator_4",
-            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(8f,100f),10));
+            () -> new AcceleratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(8f,100f),4));
 
     //BlockItems
     public static final RegistryObject<Item> ACCELERATOR_1_ITEM = ITEMS.register("accelerator_1",
