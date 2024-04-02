@@ -5,7 +5,6 @@ import com.spiralsky.accelerator.Init.BlockEntityInit;
 import com.spiralsky.accelerator.Init.BlockInit;
 import com.spiralsky.accelerator.Init.CreativeTabInit;
 import com.spiralsky.accelerator.Init.ItemInit;
-import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;

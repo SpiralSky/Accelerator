@@ -2,6 +2,7 @@ package com.spiralsky.accelerator.Init;
 
 import com.spiralsky.accelerator.Accelerator;
 import com.spiralsky.accelerator.Blocks.AcceleratorBlock;
+import com.spiralsky.accelerator.ModCreativeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -30,11 +31,11 @@ public class BlockInit {
 
     //BlockItems
     public static final RegistryObject<Item> ACCELERATOR_1_ITEM = ITEMS.register("accelerator_1",
-            () -> new BlockItem(ACCELERATOR_1_BLOCK.get(), new Item.Properties()));
+            () -> new BlockItem(ACCELERATOR_1_BLOCK.get(), new Item.Properties().tab(ModCreativeTab.instance)));
     public static final RegistryObject<Item> ACCELERATOR_2_ITEM = ITEMS.register("accelerator_2",
-            () -> new BlockItem(ACCELERATOR_2_BLOCK.get(), new Item.Properties()));
+            () -> new BlockItem(ACCELERATOR_2_BLOCK.get(), new Item.Properties().tab(ModCreativeTab.instance)));
     public static final RegistryObject<Item> ACCELERATOR_3_ITEM = ITEMS.register("accelerator_3",
-            () -> new BlockItem(ACCELERATOR_3_BLOCK.get(), new Item.Properties()));
+            () -> new BlockItem(ACCELERATOR_3_BLOCK.get(), new Item.Properties().tab(ModCreativeTab.instance)));
     public static final RegistryObject<Item> ACCELERATOR_4_ITEM = ITEMS.register("accelerator_4",
-            () -> new BlockItem(ACCELERATOR_4_BLOCK.get(), new Item.Properties()));
+            () -> new BlockItem(ACCELERATOR_4_BLOCK.get(), new Item.Properties().tab(ModCreativeTab.instance)));
 }
