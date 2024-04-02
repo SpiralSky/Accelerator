@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.spiralsky.accelerator.Init.ItemInit.ITEMS;
 
+@SuppressWarnings("unused")
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Accelerator.MODID);
